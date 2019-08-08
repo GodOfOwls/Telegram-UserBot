@@ -7,7 +7,6 @@ Userbot module to help you manage a group
 """
 
 from asyncio import sleep
-
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,
                              ImageProcessFailedError, PhotoCropSizeSmallError,
                              UserAdminInvalidError)
@@ -19,29 +18,16 @@ from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
                                MessageMediaPhoto)
-
 from userbot import (BRAIN_CHECKER,
                      CMD_HELP, BOTLOG, BOTLOG_CHATID, bot,
                      is_mongo_alive, is_redis_alive)
 from userbot.events import register
 from userbot.modules.dbhelper import (mute, unmute, get_muted,
                                       gmute, ungmute, get_gmuted)
-
-from telethon import events
-from telethon.errors import ChatAdminRequiredError
-from telethon.tl.types import ChannelParticipantsAdmins, ChatParticipantCreator, Chat
-
-from userbot import bot
-									  
-									  
+from telethon import events									  
 from time import sleep
 import asyncio
-from telethon import events
-from telethon.errors import BadRequestError
-from telethon.errors.rpcerrorlist import UserIdInvalidError
-from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest
-
-from telethon.tl.types import ChatAdminRights, ChatBannedRights									  
+							  
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
