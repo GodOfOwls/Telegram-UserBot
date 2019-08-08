@@ -161,17 +161,17 @@ async def _(event):
 
 CMD_HELP.update({
     "hate": ".hate\
-    \mUsage: Tells people in German that you hate them."
+    \nUsage: Tells people in German that you hate them."
 })
 CMD_HELP.update({
     "love": ".love\
-    \mUsage: Tells people in German that you no longer hate them."
+    \nUsage: Tells people in German that you no longer hate them."
 })
 CMD_HELP.update({
     "elph03": ".elph03\
-    \mUsage: This is a Insider so no Infos about that."
+    \nUsage: This is a Insider so no Infos about that."
 })
 CMD_HELP.update({
     "report": ".report\
-    \mUsage: Reports people and mentions all admins of the group."
+    \nUsage: Reports people and mentions all admins of the group."
 })
