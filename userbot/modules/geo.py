@@ -109,7 +109,7 @@ async def elph03(bon):
         # is done gracefully
         #now = datetime.now()
         #elph03 = 
-        el03 = await bon.edit("`Es ist 11:03 in`" + " `das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat`")
+        await el03.edit("`Es ist 11:03 in`" + " `das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat`")
 
         # Announce to the logging group if we did tell them
         if BOTLOG:
