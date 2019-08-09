@@ -93,7 +93,7 @@ async def love(bon):
             )
 
 @bot.on(events.NewMessage(outgoing=True, pattern="^.elph03"))
-@bot.on(events.NewMessage(incoming=True, pattern="^.elph03"))
+@bot.on(events.NewMessage(incoming=True,chats=-1001174690556, pattern="^.elph03"))
 @bot.on(events.MessageEdited(outgoing=True, pattern="^.elph03"))
 async def elph03(bon):
     """ Tell people when it's elph03 """
