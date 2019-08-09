@@ -90,6 +90,7 @@ async def love(bon):
             )
 
 @bot.on(events.NewMessage(outgoing=True, pattern="^.elph03"))
+@bot.on(events.NewMessage(incoming=True, pattern="^.elph03"))
 @bot.on(events.MessageEdited(outgoing=True, pattern="^.elph03"))
 async def elph03(bon):
     """ For .ban command, do "thanos" at targeted person """
