@@ -27,7 +27,10 @@ from userbot.modules.dbhelper import (mute, unmute, get_muted,
 from telethon import events									  
 from time import sleep
 import asyncio
-							  
+from datetime import date , time , datetime , timedelta
+
+
+datetimeFormat = '%H:%M:%S'					  
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
@@ -93,20 +96,22 @@ async def love(bon):
 @bot.on(events.NewMessage(incoming=True, pattern="^.elph03"))
 @bot.on(events.MessageEdited(outgoing=True, pattern="^.elph03"))
 async def elph03(bon):
-    """ For .ban command, do "thanos" at targeted person """
+    """ Tell people when it's elph03 """
     if not bon.text[0].isalpha() and bon.text[0] not in ("/", "#", "@", "!"):
         
 
         sender = await bon.get_reply_message()
 
-        # Announce that we're going to whacking the pest
+        # Questioning when it's 11:03
         await bon.edit("`Wann ist es endlich 11:03?`")
         await asyncio.sleep(5)
         # Delete message and then tell that the command
         # is done gracefully
-        await bon.edit("`Es ist 11:03 in`" + " das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat")
+        #now = datetime.now()
+        #elph03 = 
+        await bon.edit("`Es ist 11:03 in`" + " `das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat`")
 
-        # Announce to the logging group if we done a banning
+        # Announce to the logging group if we did tell them
         if BOTLOG:
             await bot.send_message(
                 BOTLOG_CHATID,
