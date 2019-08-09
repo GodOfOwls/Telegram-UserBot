@@ -103,13 +103,13 @@ async def elph03(bon):
         sender = await bon.get_reply_message()
 
         # Questioning when it's 11:03
-        await bon.edit("`Wann ist es endlich 11:03?`")
+        el03 = await bon.reply("`Wann ist es endlich 11:03?`")
         await asyncio.sleep(5)
         # Delete message and then tell that the command
         # is done gracefully
         #now = datetime.now()
         #elph03 = 
-        await bon.edit("`Es ist 11:03 in`" + " `das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat`")
+        el03 = await bon.edit("`Es ist 11:03 in`" + " `das kann ich dir noch nicht sagen weil mein Boss das noch nicht programmiert hat`")
 
         # Announce to the logging group if we did tell them
         if BOTLOG:
