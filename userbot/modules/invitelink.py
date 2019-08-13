@@ -19,8 +19,8 @@ from userbot import (BOTLOG, BOTLOG_CHATID, BRAIN_CHECKER, CMD_HELP, bot,
 from userbot.events import errors_handler, register
 from userbot.modules.dbhelper import (get_gmuted, get_muted, gmute, mute,
                                       ungmute, unmute)
-from utils import helpers
-from utils.mdtex import Bold, Code, KeyValueItem, MDTeXDocument, Section
+from userbot.utils import helpers
+from userbot.utils.mdtex import Bold, Code, KeyValueItem, MDTeXDocument, Section
 
 
 
