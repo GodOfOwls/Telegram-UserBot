@@ -85,6 +85,42 @@ async def purgeme(delme):
         await smsg.delete()
 
 
+@register(outgoing=True, pattern="^.purgesl")
+@errors_handler
+async def purgeme(delme):
+    """ For .purgesl, delete x count of latest messages one by one wich looks cool."""
+    if not delme.text[0].isalpha() and delme.text[0] not in (
+            "/", "#", "@", "!"):
+        message = delme.text
+        count = int(message[9:])
+        i = 1
+
+        async for message in delme.client.iter_messages(delme.chat_id):
+            if i > count + 1:
+                break
+            i = i + 1
+            await message.delete()
+
+        smsg = await delme.client.send_message(
+            delme.chat_id,
+            "`Purge complete!` Purged "
+            + str(count)
+            + " messages. **This auto-generated message "
+            + " shall be self destructed in 2 seconds.**",
+        )
+        if BOTLOG:
+            await delme.client.send_message(
+                BOTLOG_CHATID, "Purge of " +
+                               str(count) + " messages done successfully."
+            )
+        await sleep(2)
+        i = 1
+        await smsg.delete()
+
+
+
+
+
 @register(outgoing=True, pattern="^.del$")
 @errors_handler
 async def delete_it(delme):
@@ -156,6 +192,11 @@ CMD_HELP.update({
 CMD_HELP.update({
     'purgeme': '.purgeme <x>\
         \nUsage: Delete x amount of your latest messages.'
+})
+
+CMD_HELP.update({
+    'purgesl': '.purgesl <x>\
+        \nUsage: Delete x amount of latest messages one by one wich looks cool.'
 })
 
 CMD_HELP.update({
