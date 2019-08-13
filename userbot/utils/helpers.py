@@ -10,7 +10,7 @@ from telethon import utils
 from telethon.events import NewMessage
 from telethon.tl.types import User
 
-from utils import parsers
+from userbot.utils import parsers
 
 INVITELINK_PATTERN = re.compile(r'(?:joinchat|join)(?:/|\?invite=)(.*|)')
 
