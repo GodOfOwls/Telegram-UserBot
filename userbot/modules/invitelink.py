@@ -35,12 +35,12 @@ async def invitelink(event):
     _, args = await helpers.get_args(event)
     link = args[0]
     link_creator, chatid, random_part = await helpers.resolve_invite_link(link)
-    await bot.send_message(event.chat, MDTeXDocument(
-        Section(Bold('Invite Link'),
-                KeyValueItem('Link Creator',
-                             f'[{link_creator}](tg://user?id={link_creator})'),
-                KeyValueItem('Chat ID', Code(chatid)),
-                KeyValueItem('Random Part', Code(random_part)))))
+    caption = "<b>INVITELINK INFO:</b> \n"
+    caption += f"Creator ID: {link_creator} \n"
+    caption += f"Chat ID: {chatid} \n"
+    caption += f"Random ID: {random_part} \n"
+    
+    await event.reply(caption)
 
 
 
