@@ -27,7 +27,7 @@ from userbot.utils.mdtex import Bold, Code, KeyValueItem, MDTeXDocument, Section
 
 
 
-@register(outgoing=True, pattern="^.i(nvite)?l(ink)?")
+@register(outgoing=True, pattern="^\.i(nvite)?l(ink)?")
 @errors_handler
 async def invitelink(event):
     """Command to get link creator, chatid and the random part of an invite link."""
