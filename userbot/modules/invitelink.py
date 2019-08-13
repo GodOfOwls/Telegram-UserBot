@@ -64,5 +64,5 @@ async def invitelink(event):
 
 
 CMD_HELP.update({
-    ".il check invite links BETA"
+    ".il ":" check invite links BETA"
 })
