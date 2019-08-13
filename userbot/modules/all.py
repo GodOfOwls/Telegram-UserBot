@@ -93,8 +93,7 @@ async def _(event):
         if current_mentions < mention_limit:
             current_mentions += 1
             replied_user = await bot(GetFullUserRequest(x.id))
-            mentions += f"{x.first_name} {x.last_name} ({x.username}): gemeinsame Chats={replied_user.common_chats_count}\n"
-
+            mentions += f"[{x.first_name}](tg://user?id={x.id}): gemeinsame Chats={replied_user.common_chats_count}\n"
 
 
         else:
