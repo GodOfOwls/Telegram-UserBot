@@ -36,5 +36,5 @@ async def startfischer(handler):
 
 
 CMD_HELP.update({
-    ""
+    ".startfisch":" Startet Fisching"
 })
